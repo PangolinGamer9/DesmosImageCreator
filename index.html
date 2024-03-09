@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Desmos Image Creator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="style.css" rel="stylesheet">
+  <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+</head>
+<body>
+
+  <div class="fullscreen" id="calculator" style="display:none;"></div>
+
+  <div id="main-screen">
+    <div id="title-heading" style="text-align: center;">
+      <h1>Desmos Image Creator</h1>
+      <p>This website allows you to upload an image and have it recreated in Desmos.</p>
+      <p>Set the correct resolution using the dropdown before uploading the photo and ensure the image is the correct size before uploading it.</p>
+    </div>
+    
+    <div id="image-input-div" style="text-align: center; margin-top: 10px;">
+      <input id="image-input" style="margin-left: 15px;" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+      <select id="image-resolution">
+        <option>256x144</option>
+        <option>320x180</option>
+        <option>426x240</option>
+        <option>512x288</option>
+        <option>568x320</option>
+        <option>640x320</option>
+      </select>
+    </div>
+
+    <div style="text-align: center; margin-top: 15px;">
+      <canvas id="myCanvas"> </canvas>
+      <!--Image used to add an image to the canvas. Never shown, but used as a reference-->
+      <image id="ref-image" style="display: none;"></image>
+    </div>
+
+    <div id="submit-graph" style="text-align: center;">
+      <button onclick="loadDesmosGraph()">Create the Desmos graph!</button>
+    </div>
+  </div>
+
+
+
+
+  <script src="analysis.js"></script>
+  <script src="desmos-graph.js"></script>
+  
+</body>
+</html>
