@@ -49,9 +49,11 @@ function loadDesmosGraph(){
             //"latex": '([0...'+ image_data[0][0].length +'],' + i + ')',
             // Latex for using polygons as the pixels
             "latex": '\\polygon(([0...'+ image_data[0][0].length +'],' + i + '), ([1...' + (image_data[0][0].length+1) + '], ' + i +'), ([0...'+ (image_data[0][0].length+1) +'],' + (i+1) + '), ([1...' + (image_data[0][0].length) + '], ' + (i+1) +'))',
+            "colorLatex": "c_{" + (image_data.length-1-i) + "}"
         });
     }
 
     // Sets the state of the calculator to the object created above
     calculator.setState(new_state)
 }
+
