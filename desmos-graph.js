@@ -48,8 +48,9 @@ function loadDesmosGraph(){
             // Latex for using points as pixels
             //"latex": '([0...'+ image_data[0][0].length +'],' + i + ')',
             // Latex for using polygons as the pixels
-            "latex": '\\polygon(([0...'+ image_data[0][0].length +'],' + i + '), ([1...' + (image_data[0][0].length+1) + '], ' + i +'), ([0...'+ (image_data[0][0].length+1) +'],' + (i+1) + '), ([1...' + (image_data[0][0].length) + '], ' + (i+1) +'))',
-            "colorLatex": "c_{" + (image_data.length-1-i) + "}"
+            "latex": '\\polygon(([0...'+ image_data[0][0].length +'],' + i + '), ([1...' + (image_data[0][0].length+1) + '], ' + i +'), ([1...'+ (image_data[0][0].length+1) +'],' + (i+1) + '), ([0...' + (image_data[0][0].length) + '], ' + (i+1) +'))',
+            "colorLatex": "c_{" + (image_data.length-1-i) + "}",
+            "fillOpacity": "1"
         });
     }
 
